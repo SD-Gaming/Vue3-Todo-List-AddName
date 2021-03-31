@@ -24,7 +24,6 @@ interface Student {
 export default {
   name: 'App',
   setup() {
-    const count = ref(0)
     const itemNew = ref('')
 
     const storage = localStorage.getItem('student-list')
@@ -54,7 +53,7 @@ export default {
       localStorage.setItem('student-list', JSON.stringify(newval))
     })
     return {
-      count, msg, itemNew, items, addNew, turnRed, remove
+      msg, itemNew, items, addNew, turnRed, remove
     }
   }
 }
